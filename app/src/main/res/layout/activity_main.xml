@@ -38,8 +38,8 @@
             android:id="@+id/button4"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
-            />
+            android:layout_marginLeft="30dp"/>
+
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -47,8 +47,10 @@
             android:layout_height="100dp"
             android:layout_marginLeft="270dp"
             android:scaleType="fitCenter"
-            android:backgroundTint="#CC6CE7"
-            app:srcCompat="@drawable/handshake__1_" />
+            app:srcCompat="@drawable/handshake__1_"
+        />
+
+
 
 
     </FrameLayout>
