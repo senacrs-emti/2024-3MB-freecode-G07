@@ -34,23 +34,23 @@
         app:layout_constraintTop_toTopOf="@+id/frameLayout"
         app:layout_constraintVertical_bias="0.0">
 
-        <Button
-            android:id="@+id/button4"
+        <ImageButton
+            android:id="@+id/imageButton2"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="30dp"/>
-
+            android:layout_marginLeft="50dp"
+            android:background="#212020"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/handshake" />
 
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="270dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/handshake__1_"
-        />
-
-
+            android:background="#212020"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/bell" />
 
 
     </FrameLayout>
