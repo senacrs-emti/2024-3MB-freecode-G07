@@ -10,8 +10,8 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="405dp"
-        android:layout_height="623dp"
+        android:layout_width="403dp"
+        android:layout_height="585dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,38 +20,62 @@
             android:id="@+id/map_fragment"
             class="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="408dp"
-            android:layout_height="621dp" />
+            android:layout_height="584dp" />
 
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="409dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="624dp"
+        android:layout_width="406dp"
+        android:layout_height="142dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:layout_constraintVertical_bias="0.0">
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="50dp"
+            android:layout_width="125dp"
+            android:layout_height="108dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:background="#212020"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/handshake" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="270dp"
+            android:layout_width="117dp"
+            android:layout_height="106dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="255dp"
             android:background="#212020"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/bell" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="115dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text="OFEREÇA AJUDA"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="257dp"
+            android:layout_marginTop="115dp"
+            android:fontFamily="@font/kanit_medium"
+            android:text="SOLICITAR AJUDA"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </FrameLayout>
 
