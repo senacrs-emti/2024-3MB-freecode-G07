@@ -31,12 +31,23 @@
             android:id="@+id/editTextText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="75dp"
             android:layout_marginLeft="90dp"
-            android:ems="10"
-            android:inputType="text"
+            android:layout_marginTop="75dp"
             android:background="@color/white"
-            android:text="Procure um p edido" />
+            android:ems="11"
+            android:inputType="text"
+            android:text="Procure um pedido"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="50dp"
+
+            android:background="@color/white"
+            android:text="Modo" />
     </FrameLayout>
 
     <FrameLayout
