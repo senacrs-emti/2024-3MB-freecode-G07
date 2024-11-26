@@ -29,8 +29,9 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/searchInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="75dp"
                 app:startIconDrawable="@android:drawable/ic_menu_search"
                 app:boxBackgroundColor="@android:color/white"
                 app:boxCornerRadiusTopStart="8dp"
@@ -42,7 +43,7 @@
                     android:id="@+id/searchEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Procure um pedido"
+                    android:hint="        Procure um pedido"
                     android:imeOptions="actionSearch"
                     android:inputType="text"
                      />
@@ -55,6 +56,8 @@
                 android:layout_height="501dp"
                 android:layout_marginTop="40dp"
                 android:text="Resultados aparecerão aqui"
+                android:textColor="@color/white"
+                android:textSize="19dp"
                 android:textAlignment="center" />
 
         </LinearLayout>
