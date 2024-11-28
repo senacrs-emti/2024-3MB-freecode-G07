@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id 'com.google.secrets_gradle_plugin' version'0.5'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -39,12 +40,15 @@ android {
 dependencies {
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.3.0'
+    implementation platform('com.google.firebase:firebase-bom:33.6.0')
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
     implementation libs.androidx.activity
     implementation libs.androidx.constraintlayout
     implementation 'com.google.android.gms:play-services-maps:19.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.3.0'
     implementation libs.androidx.navigation.fragment.ktx
     implementation libs.androidx.navigation.ui.ktx
     testImplementation libs.junit

@@ -1,13 +1,11 @@
 package com.example.gps
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -17,7 +15,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.auth.FirebaseAuth
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,14 +38,15 @@ class AuthActivity : AppCompatActivity() {
         override fun getItemCount(): Int = 2
 
         override fun createFragment(position: Int): Fragment {
-            return if (position == 0) LoginFragment() else RegistroFragment()
+            return if (position == 0) Login() else Login.registro()
         }
     }
 
-    class LoginFragment : Fragment() {
+    class Login : Fragment() {
         private lateinit var emailInput: TextInputEditText
         private lateinit var senhaInput: TextInputEditText
         private lateinit var loginButton: MaterialButton
+        private  val auth = FirebaseAuth.getInstance()
 
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                                   savedInstanceState: Bundle?): View? {
@@ -63,6 +62,7 @@ class AuthActivity : AppCompatActivity() {
 
                 if (validarLogin(email, senha)) {
                     realizarLogin(email, senha)
+
                 }
             }
 
@@ -92,16 +92,30 @@ class AuthActivity : AppCompatActivity() {
         }
 
         private fun realizarLogin(email: String, senha: String) {
-            // Implementação do login
-            // Exemplo com Firebase Authentication ou sua própria lógica
-            Toast.makeText(requireContext(),
-                "Login tentado com $email",
-                Toast.LENGTH_SHORT
-            ).show()
+            val auth = FirebaseAuth.getInstance()
+            auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener { login->
+            if (login.isSuccessful){
+                Toast.makeText(requireContext(),
+                    "Login tentado com $email",
+                    Toast.LENGTH_SHORT
+                ).show()
+                val intent = Intent(requireContext(), MainActivity::class.java)
+                startActivity(intent)
+
+        }
+
+            }
+
+        }
+
+        companion object {
+            fun registro(): Fragment {
+                return (registro())
+            }
         }
     }
 
-    class RegistroFragment : Fragment() {
+        class registro : Fragment() {
         private lateinit var nomeInput: TextInputEditText
         private lateinit var emailInput: TextInputEditText
         private lateinit var senhaInput: TextInputEditText
@@ -110,7 +124,7 @@ class AuthActivity : AppCompatActivity() {
 
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                                   savedInstanceState: Bundle?): View? {
-            val view = inflater.inflate(R.layout.activity_register, container, false)
+            val view = inflater.inflate(R.layout.activity_registro, container, false)
 
             nomeInput = view.findViewById(R.id.registroNomeEditText)
             emailInput = view.findViewById(R.id.registroEmailEditText)
@@ -169,6 +183,11 @@ class AuthActivity : AppCompatActivity() {
         }
 
         private fun realizarRegistro(nome: String, email: String, senha: String) {
+            val auth = FirebaseAuth.getInstance()
+            auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener { cadastro->
+
+            }
+
             // Implementação do registro
             // Exemplo com Firebase Authentication ou sua própria lógica
             Toast.makeText(requireContext(),
@@ -176,5 +195,6 @@ class AuthActivity : AppCompatActivity() {
                 Toast.LENGTH_SHORT
             ).show()
         }
+
     }
 }

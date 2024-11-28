@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "166468326883",
+    "project_id": "tecf-1613b",
+    "storage_bucket": "tecf-1613b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166468326883:android:e638a54e27662cc633bcd6",
+        "android_client_info": {
+          "package_name": "com.example.gps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwJ6nnmEstKGHxNCQZ4gPI9Bl85HqrQTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
