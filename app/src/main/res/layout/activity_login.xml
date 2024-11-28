@@ -5,33 +5,37 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    tools:context=".login"
+    android:background="#212020">
 
-    <?xml version="1.0" encoding="utf-8"?>
+
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            >
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginEmailInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                app:startIconDrawable="@drawable/ic_email">
+                app:startIconDrawable="@drawable/bell">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginEmailEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
-                    android:inputType="textEmailAddress"/>
+                    android:inputType="textEmailAddress"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/ic_lock">
+                app:startIconDrawable="@drawable/bell">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginSenhaEditText"
