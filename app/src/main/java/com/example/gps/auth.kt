@@ -29,7 +29,7 @@ class AuthActivity : AppCompatActivity() {
         viewPager.adapter = AuthPagerAdapter(this)
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = if (position == 0) "login" else "Register"
+            tab.text = if (position == 0) "login" else "registro"
         }.attach()
     }
 
@@ -38,7 +38,7 @@ class AuthActivity : AppCompatActivity() {
         override fun getItemCount(): Int = 2
 
         override fun createFragment(position: Int): Fragment {
-            return if (position == 0) Login() else Login.registro()
+            return if (position == 0) Login() else registro()
         }
     }
 
