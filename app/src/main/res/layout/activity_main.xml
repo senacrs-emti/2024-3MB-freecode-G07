@@ -48,7 +48,7 @@
             android:rotation="90"    />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/btnSalvarLocalizacao"
             android:layout_width="125dp"
             android:layout_height="108dp"
             android:layout_marginLeft="30dp"
@@ -58,7 +58,7 @@
             app:srcCompat="@drawable/handshake" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/btnSalvarLocalizacaoAleatoria"
             android:layout_width="117dp"
             android:layout_height="106dp"
             android:layout_marginTop="10dp"
