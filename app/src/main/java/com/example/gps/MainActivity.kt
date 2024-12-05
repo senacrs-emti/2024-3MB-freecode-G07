@@ -29,6 +29,7 @@ import android.app.AlertDialog
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -52,7 +53,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         var btnSalvarLocalizacao: ImageButton = findViewById(R.id.btnSalvarLocalizacao)
 
 
-
         // Inicializar localização
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -64,13 +64,13 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         // salvar localização atual
         btnSalvarLocalizacao = findViewById(R.id.btnSalvarLocalizacao)
         btnSalvarLocalizacao.setOnClickListener {
+            val dialog = AddDialogFragment()
+            dialog.show(supportFragmentManager, "AddDialogFragment")
             obterEsalvarLocalizacaoAtual()
         }
 
-
         //localização aleatória
         btnSalvarLocalizacaoAleatoria = findViewById(R.id.btnSalvarLocalizacaoAleatoria)
-
     }
 
 

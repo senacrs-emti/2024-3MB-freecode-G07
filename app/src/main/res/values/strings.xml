@@ -42,4 +42,10 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="tittle_text_hint">digite do que você precisa</string>
+    <string name="desc_text_hint">digite oquê precisa</string>
+    <string name="low">baixa\n</string>
+    <string name="medium">média</string>
+    <string name="high">alta\n</string>
+
 </resources>

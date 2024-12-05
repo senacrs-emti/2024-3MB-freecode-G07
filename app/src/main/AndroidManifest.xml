@@ -19,9 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GPS"
         tools:targetApi="31">
-
         <activity
-            android:name=".TP"
+            android:name=".MainActivity2"
+            android:exported="true"
+            android:theme="@style/Theme.GPS" />
+        <activity
+            android:name=".tt"
             android:exported="true" />
         <activity
             android:name=".AuthActivity"

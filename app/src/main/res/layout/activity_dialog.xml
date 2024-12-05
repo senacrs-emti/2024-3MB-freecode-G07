@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Do que você precisa"
+            android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/dialog_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/tittle_text_hint"
+        android:inputType="text"
+        />
+
+    <Spinner
+        android:id="@+id/dialog_spinner"
+        android:layout_width="match_parent"
+        android:entries="@array/prorities"
+        android:backgroundTint="@color/black"
+        android:layout_height="match_parent"/>
+
+        <Button
+        android:id="@+id/dialog_ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Salvar"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
