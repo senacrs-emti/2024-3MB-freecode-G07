@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id 'com.google.secrets_gradle_plugin' version'0.5'
     id 'com.google.gms.google-services'
+    id 'kotlin-android'
 }
 
 android {
@@ -56,6 +57,6 @@ dependencies {
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
     implementation 'com.google.android.gms:play-services-location:21.0.1'
-    // Firebase
     implementation 'com.google.firebase:firebase-firestore-ktx:24.1.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.3.0'
 }

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Requests"
+    tools:context=".MainActivity"
     android:background="#212020">
 
 
@@ -25,6 +25,11 @@
                 android:layout_marginBottom="20dp"
                 android:textColor="#FAF3F3"
                 android:textSize="30sp" />
+            <Button
+                android:id="@+id/retrieveInputsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar Entradas"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/searchInputLayout"
@@ -53,14 +58,16 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/resultTextView"
+                android:id="@+id/inputsTextView"
                 android:layout_width="match_parent"
-                android:layout_height="501dp"
-                android:layout_marginTop="40dp"
-                android:text="Resultados aparecerão aqui"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#212020"
+                android:padding="16dp"
                 android:textColor="@color/white"
-                android:textSize="19dp"
-                android:textAlignment="center" />
+                android:text="Suas entradas aparecerão aqui"
+                android:textAlignment="center"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
